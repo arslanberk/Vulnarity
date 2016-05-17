@@ -10,7 +10,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        mainView window =new  mainView("Vulnarity", 800, 600);
+        mainVihew window =new  mainView("Vulnarity", 800, 600);
 	window.display();
     }
 
