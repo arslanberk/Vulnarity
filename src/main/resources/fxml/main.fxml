@@ -24,7 +24,6 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                    <MenuItem fx:id="menuItemDocument" mnemonicParsing="false" onAction="#menuItemDocumentClicked" text="Document" />
                         <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#menuItemAboutClicked" text="About" />
                   </items>
                 </Menu>
