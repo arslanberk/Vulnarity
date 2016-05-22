@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
@@ -655,8 +656,8 @@
                            <children>
                               <HBox spacing="10.0">
                                  <children>
+                                    <Label text="Scan has been completed. Results are following:" />
                                     <Region HBox.hgrow="ALWAYS" />
-                                    <Button mnemonicParsing="false" text="Certificate Details" />
                                  </children>
                                  <VBox.margin>
                                     <Insets />
@@ -858,6 +859,92 @@
                      </children></AnchorPane>
             </content>
           </Tab>
+            <Tab text="Vulnerability Scoring System">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="519.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <left>
+                              <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label text="Base Metrics" />
+                                    <ComboBox fx:id="AV" prefWidth="200.0" promptText="Attack Vector" />
+                                    <ComboBox fx:id="AC" prefWidth="200.0" promptText="Attack Complexity" />
+                                    <ComboBox fx:id="PR" prefWidth="200.0" promptText="Privilege Required" />
+                                    <ComboBox fx:id="UI" prefWidth="200.0" promptText="User Interaction" />
+                                    <ComboBox fx:id="CI" prefWidth="200.0" promptText="Confidentiality Impact" />
+                                    <ComboBox fx:id="II" prefWidth="200.0" promptText="Integrity Impact" />
+                                    <ComboBox fx:id="AI" prefWidth="200.0" promptText="Availability Impact" />
+                                    <ComboBox fx:id="S" prefWidth="200.0" promptText="Scope" />
+                                    <Label text="Requirements" />
+                                    <ComboBox fx:id="CR" prefWidth="200.0" promptText="Confidentiality Requirement" />
+                                    <ComboBox fx:id="IR" prefWidth="200.0" promptText="Integrity Requirement" />
+                                    <ComboBox fx:id="AR" prefWidth="200.0" promptText="Availability Requirement" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </left>
+                           <right>
+                              <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Please select all metric values before starting !" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Button fx:id="calculateButton" mnemonicParsing="false" onAction="#calculateButtonClicked" text="Calculate" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="20.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Base Score:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="baseScore" text="Not Calculated">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label text="Modified Score:" />
+                                          <Region HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="modifiedScore" text="Not Calculated">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </right>
+                           <center>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TextArea fx:id="metricDescription" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" VBox.vgrow="ALWAYS" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </center>
