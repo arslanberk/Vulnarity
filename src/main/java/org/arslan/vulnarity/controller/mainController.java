@@ -412,14 +412,6 @@ public class mainController implements Initializable{
 		
 	}
 		
-	public void menuItemDocumentClicked(){
-		Stage stage = (Stage) informationOption.getScene().getWindow(); //informationOption is selected randomly to get actual window
-		Boolean answer = confirmBox.display("Confirm", "Are you sure you want to exit?");
-		if(answer){
-			stage.close();
-		}
-	}
-	
 	public void menuItemAboutClicked(){
 		alertBox.display("About", "This application is developed by Berk Arslan for BsC project in KhPI.");		
 	}
