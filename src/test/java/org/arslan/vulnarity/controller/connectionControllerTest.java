@@ -83,11 +83,9 @@ public class connectionControllerTest {
     public void testIsHTTPS() {
         System.out.println("isHTTPS");
         String url = "http://www.example.com";
-        boolean expResult = false;
         boolean result = connectionController.isHTTPS(url);
-        assertEquals(expResult, result);
+        assertFalse( result);
         url = "https://www.example.com";
-        expResult = true;
         result = connectionController.isHTTPS(url);
         assertTrue(result);
         // TODO review the generated test code and remove the default call to fail.
