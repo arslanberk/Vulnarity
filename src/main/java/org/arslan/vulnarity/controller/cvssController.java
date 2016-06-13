@@ -226,7 +226,7 @@ public class cvssController {
             result = Math.round( Math.min(( iss + ess ) , 10)*10.0)/10.0;
         }
         else if(!scope){
-            result = Math.round( Math.min(( 1.08 *(iss + ess) ) , 10)*100.0)/100.0;
+            result = Math.round( Math.min(( 1.08 *(iss + ess) ) , 10)*10.0)/10.0;
         }
         return result;
     }
